@@ -49,13 +49,14 @@ if fileitem.filename:
    # directory traversal attacks
    fn = os.path.basename(fileitem.filename)
    open('/tmp/' + fn, 'wb').write(fileitem.file.read())
-
    message = 'The file "' + fn + '" was uploaded successfully'
-   
+   path = '/tmp/' + fn
+   image = Image.open('/tmp/' + fn)
+   image.show()   
 else:
    message = 'No file was uploaded'
 
-
+darpant-289/sdsd
 print "Content-type:text/html\r\n\r\n"
 print "<html>"
 print "<head>"
@@ -77,7 +78,8 @@ print "<br/>"
 print "<b>Comments . :</b> %s" % text_content
 print "<br/>"
 print "<b>Education :</b> %s" % edu
-print "<h1><p>%s</p>"  % (message,)    
+print "<h1><p>%s</p>"  % (message,)  
+print "<img src ='%s' alt = '/tmp/%s'>"  % (path,fn,)
 print "<button><a href='http://127.0.0.1/register.html'>Back</a></button>"         
 print "</center>"
 print "</body>"
