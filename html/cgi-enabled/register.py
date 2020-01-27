@@ -56,7 +56,7 @@ if fileitem.filename:
 else:
    message = 'No file was uploaded'
 
-darpant-289/sdsd
+
 print "Content-type:text/html\r\n\r\n"
 print "<html>"
 print "<head>"
