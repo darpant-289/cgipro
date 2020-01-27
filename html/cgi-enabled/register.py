@@ -2,7 +2,9 @@
 
 # Import modules for CGI handling 
 import cgi, os
-import cgitb; 
+import cgitb;
+from PIL import image
+
 
 cgitb.enable()
 
